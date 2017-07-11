@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Album } from './album.model';
-import { ALBUMS } from './mock-albums';
+import { Scenario } from './scenario.model';
+import { SCENARIOS } from './scenarios';
 
 @Injectable()
 export class AlbumService {
@@ -8,13 +8,13 @@ export class AlbumService {
   constructor() { }
 
   getAlbums() {
-    return ALBUMS;
+    return SCENARIOS;
   }
 
   getAlbumById(albumId: number){
-    for (var i = 0; i <= ALBUMS.length - 1; i++) {
-      if (ALBUMS[i].id === albumId) {
-        return ALBUMS[i];
+    for (var i = 0; i <= SCENARIOS.length - 1; i++) {
+      if (SCENARIOS[i].id === albumId) {
+        return SCENARIOS[i];
       }
     }
   }

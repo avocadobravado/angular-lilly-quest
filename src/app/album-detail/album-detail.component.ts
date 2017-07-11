@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { Album } from '../album.model';
+import { Scenario } from '../scenario.model';
 import { AlbumService } from '../album.service';
 
 @Component({
@@ -11,8 +11,8 @@ import { AlbumService } from '../album.service';
   providers: [AlbumService]
 })
 export class AlbumDetailComponent implements OnInit {
-  albumId: number;
-  albumToDisplay: Album;
+  scenarioId: number;
+  scenarioToDisplay: Scenario;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,9 +22,9 @@ export class AlbumDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.albumId = parseInt(urlParameters['id']);
+      this.scenarioId = parseInt(urlParameters['id']);
     });
-    this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
+    this.scenarioToDisplay = this.albumService.getAlbumById(this.scenarioId);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Album } from '../album.model';
+import { Scenario } from '../scenario.model';
 import { Router } from '@angular/router';
 import { AlbumService } from '../album.service';
 
@@ -13,13 +13,13 @@ import { AlbumService } from '../album.service';
 export class GameOverComponent implements OnInit  {
   constructor(private router: Router, private albumService: AlbumService) {}
 
-  albums: Album[];
+  albums: Scenario[];
 
   ngOnInit(){
     this.albums = this.albumService.getAlbums();
   }
 
-  goToDetailPage(clickedAlbum: Album) {
+  goToDetailPage(clickedAlbum: Scenario) {
   this.router.navigate(['albums', clickedAlbum.id]);
   };
 }

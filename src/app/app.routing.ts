@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     component: GameOverComponent
   },
   {
-    path: 'albums/:id',
+    path: 'scenarios/:id',
     component: AlbumDetailComponent
   }
  ];
