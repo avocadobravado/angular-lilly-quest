@@ -4,19 +4,19 @@ import { Router } from '@angular/router';
 import { AlbumService } from '../album.service';
 
 @Component({
-  selector: 'app-marketplace',
-  templateUrl: './marketplace.component.html',
-  styleUrls: ['./marketplace.component.css'],
+  selector: 'app-game-over',
+  templateUrl: './game-over.component.html',
+  styleUrls: ['./game-over.component.css'],
   providers: [AlbumService]
 })
 
-export class MarketplaceComponent implements OnInit  {
+export class GameOverComponent implements OnInit  {
   constructor(private router: Router, private albumService: AlbumService) {}
 
   albums: Album[];
 
   ngOnInit(){
-    this.albums = this.albumService.getAlbums(); 
+    this.albums = this.albumService.getAlbums();
   }
 
   goToDetailPage(clickedAlbum: Album) {

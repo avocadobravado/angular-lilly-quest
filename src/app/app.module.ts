@@ -6,16 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
-import { AboutComponent } from './about/about.component';
-import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { YesComponent } from './yes/yes.component';
+import { GameOverComponent } from './game-over/game-over.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    AboutComponent,
-    MarketplaceComponent,
+    YesComponent,
+    GameOverComponent,
     AlbumDetailComponent
   ],
   imports: [

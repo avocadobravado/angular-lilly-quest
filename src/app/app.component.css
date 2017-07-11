@@ -1,0 +1,27 @@
+.lilly {
+  width: 300px;
+  margin: 30px auto;
+  display: block;
+  animation: wobble 2s infinite both;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    }
+  20% {
+    transform: translate(-15%, 0) rotate(-15deg);
+    }
+  40% {
+    transform: translate(20%, 0) rotate(10deg);
+    }
+  50% {
+    transform: translate(-10%, 0) rotate(-10deg);
+    }
+  60% {
+    transform: translate(10%, 0) rotate(10deg);
+    }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    }
+  }
